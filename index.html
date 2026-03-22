@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali Popular Trip Driver - Book Your Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                     <img src="images/balidriver.png"  style="padding-top: 55px;">
+                </div>
+                
+                <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+                    <a href="#" class="hover:text-blue-500">Tour Packages</a>
+                    <a href="#" class="hover:text-blue-500">Activity Packages</a>
+                    <a href="#" class="hover:text-blue-500">Airport Transfer</a>
+                    <a href="#" class="hover:text-blue-500">Rent a Car</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-2">
+            <a href="#" class="block text-gray-700 hover:bg-blue-50 p-2 rounded">Tour Packages</a>
+            <a href="#" class="block text-gray-700 hover:bg-blue-50 p-2 rounded">Activity Packages</a>
+            <a href="#" class="block text-gray-700 hover:bg-blue-50 p-2 rounded">Airport Transfer</a>
+            <a href="#" class="block text-gray-700 hover:bg-blue-50 p-2 rounded">Rent a Car</a>
+        </div>
+    </nav>
+
+    <header class="relative h-[380px] flex items-center justify-center">
+        <img src="https://www.onayaresorts.com/wp-content/cache/seraphinite-accelerator/s/m/d/img/73ad953201ee5f87e570cf00fc6076a1.10bd4.webp" 
+             alt="Uluwatu Temple" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/30"></div>
+        
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Discover the Magic of Bali</h1>
+            <p class="text-lg md:text-xl opacity-90">Find the best deals for your tropical escape.</p>
+        </div>
+
+        <div class="absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4">
+            <div class="bg-white rounded-xl shadow-2xl p-6 grid grid-cols-1 md:grid-cols-3 gap-4 border border-gray-100">
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Travel Dates (Range)</label>
+                    <input type="text" id="range-picker" placeholder="Select Dates" class="w-full border-b-2 border-gray-200 py-2 focus:border-blue-500 outline-none text-gray-700">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Guests</label>
+                    <select class="w-full border-b-2 border-gray-200 py-2 focus:border-blue-500 outline-none text-gray-700 bg-transparent">
+                        <option>1 Adult, 0 Child</option>
+                        <option>2 Adults, 0 Child</option>
+                        <option>2 Adults, 1 Child</option>
+                        <option>Family (4+)</option>
+                    </select>
+                </div>
+                <div class="flex items-end">
+                    <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition duration-300">
+                        Search Packages
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-4 mt-32 mb-16">
+        <div class="bg-blue-50 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Rent a Car in Bali</h2>
+                <p class="text-gray-600 mb-6">Freedom to explore hidden beaches and mountain temples at your own pace. All-inclusive insurance and local support.</p>
+                
+                <form class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" placeholder="Pickup Location" class="p-3 rounded-lg border border-gray-300 w-full focus:ring-2 focus:ring-blue-500 outline-none">
+                        <input type="text" placeholder="Car Type (SUV, MPV)" class="p-3 rounded-lg border border-gray-300 w-full focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <button class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Check Availability</button>
+                </form>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://balihiredriver.com/wp-content/uploads/2018/07/bali-hire-drivers-car-rentals-home-page.jpg" alt="Rental Car" class="rounded-xl shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 mb-20">
+        <h2 class="text-2xl font-bold text-gray-800 mb-8">Trending in Bali 🔥</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/bali" target="_blank" class="group overflow-hidden rounded-xl bg-white shadow-md hover:shadow-xl transition">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-gray-800">Uluwatu Temple</h3>
+                    <p class="text-sm text-gray-500">Clifftop sunset views</p>
+                </div>
+            </a>
+            <a href="https://www.lonelyplanet.com/indonesia/bali/ubud" target="_blank" class="group overflow-hidden rounded-xl bg-white shadow-md hover:shadow-xl transition">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_XsxTMnRsstlj0NR3mf6BYvROqwzdqSDizw&s" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-gray-800">Ubud Rice Fields</h3>
+                    <p class="text-sm text-gray-500">Iconic green terraces</p>
+                </div>
+            </a>
+            <a href="https://www.balisafarimarinepark.com/" target="_blank" class="group overflow-hidden rounded-xl bg-white shadow-md hover:shadow-xl transition">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-gray-800">Nusa Penida</h3>
+                    <p class="text-sm text-gray-500">Kelingking Beach hike</p>
+                </div>
+            </a>
+            <a href="https://www.waterbom-bali.com/" target="_blank" class="group overflow-hidden rounded-xl bg-white shadow-md hover:shadow-xl transition">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/e3/17/70/the-oasis-gardens-area.jpg?w=900&h=-1&s=1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-gray-800">Waterbom Bali</h3>
+                    <p class="text-sm text-gray-500">#1 Waterpark in Asia</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 BALI POPULAR TRIP DRIVER
+The Noble Light of Paradiso Trust Your Vacation With Us, Location : DENPASAR - BALI (INDONESIA).</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Collapsible Mobile Menu Logic
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Flatpickr Date Range Implementation
+        flatpickr("#range-picker", {
+            mode: "range",
+            minDate: "today",
+            dateFormat: "d M Y",
+            onClose: function(selectedDates, dateStr, instance) {
+                console.log("Range Selected:", dateStr);
+            }
+        });
+    </script>
+</body>
+</html>
